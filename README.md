@@ -1,6 +1,6 @@
 <h1 align="center"> instalação do virtualbox </h1>
 
-![icone](virtualbox_logo.png)
+![icone](./imagens/virtualbox_logo.png)
 
 ## Descrição
 
