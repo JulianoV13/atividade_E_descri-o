@@ -203,10 +203,51 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-
 <h2 align="center"> instalação Finalizada </h2>
 
 ---
+<h2 align="center"> Instalando o Docker Compose </h2>
+
+![fotos](./imagens/docker_compose_button_39e60f2557.jpeg)
+
+O comando a seguir irá baixar a release 1.26.0 e salvar o arquivo executável em /usr/local/bin/docker-compose, que tornará este software globalmente acessível como docker-compose:
+
+><pre><code>sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose </pre></code>
+
+Em seguida, defina as permissões corretas para que o comando docker-compose seja executável:
+
+><pre><code>sudo chmod +x /usr/local/bin/docker-compose</pre></code>
+
+Para verificar se a instalação foi bem-sucedida, execute:
+
+><pre><code>docker-compose --version</pre></code>
+
+
+## <h2 align="center">Passo 2 Configurando um arquivo </h2>
+
+Para demonstrar como configurar um arquivo docker-compose.yml e trabalhar com o Docker Compose, vamos criar um ambiente de servidor Web usando a imagem Nginx oficial do Docker Hub, o registro público do Docker. Este ambiente conteinerizado fornecerá um único arquivo HTML estático.
+
+Comece criando um novo diretório em sua pasta home e então movendo-se para ele:
+
+><pre><code>mkdir ~/compose-democd ~/compose-demo</pre></code>
+
+Neste diretório, configure uma pasta da aplicação para funcionar como a raiz de documentos para seu ambiente Nginx:
+
+><pre><code>mkdir app</pre></code>
+
+Usando seu editor de texto preferido, crie um novo arquivo index.html dentro da pasta app:
+
+><pre><code>nano app/index.html</pre></code>
+
+Em seguida, crie o arquivo docker-compose.yml:
+
+![script](./imagens/script_MYSQL.png)
+
 <h2 align="center"> instalação Finalizada </h2>
 
+<h2 align="center"> Descrição final </h2>
 
+Docker é uma plataforma de software que permite criar, implantar e executar aplicativos em contêineres. Contêineres são unidades de software que empacotam todo o código, dependências e bibliotecas necessários para executar um aplicativo de maneira consistente, independentemente do ambiente de execução.
 
+O Docker Compose é uma ferramenta que permite definir e executar aplicativos compostos por vários contêineres Docker. Ele usa um arquivo YAML para definir os serviços, redes e volumes necessários para executar um aplicativo. Com o Docker Compose, é possível gerenciar facilmente o ciclo de vida de vários contêineres como um único aplicativo.
 
+O WordPress é um sistema de gerenciamento de conteúdo popular que permite criar e gerenciar sites dinâmicos. Ele é usado por milhões de pessoas em todo o mundo para criar blogs, sites de comércio eletrônico, sites corporativos e muito mais. Quando usado com o Docker e o Docker Compose, o WordPress pode ser implantado em contêineres para facilitar a instalação, configuração e escalabilidade. O Docker Compose pode ser usado para orquestrar vários contêineres, incluindo o WordPress, banco de dados MySQL e servidor da web Nginx ou Apache, permitindo que o WordPress seja executado em um ambiente isolado e consistente.
 
 
